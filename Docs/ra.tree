@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="ra"
+                 name="Requirements Analysis"
+                start-page="Introduction.topic">
+
+    <toc-element topic="Introduction.topic">
+        <toc-element topic="1-4-Definitions-Acronyms-and-Abbreviations.md"/>
+    </toc-element>
+    <toc-element topic="Proposed-System.topic"/>
+</instance-profile>
