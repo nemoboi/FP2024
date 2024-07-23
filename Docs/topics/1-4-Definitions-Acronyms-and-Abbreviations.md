@@ -58,7 +58,7 @@ Blob has to stand on button so the portal stays active
 
 The way to move between scenes
 
-## Movement
+## Controls
 
 Each Blob can be moved using the keyboard, the following are the commands:
 
@@ -67,6 +67,7 @@ Each Blob can be moved using the keyboard, the following are the commands:
 | Run Left  |  A   | Left Arrow  |
 | Run Right |  D   | Right Arrow |
 |   Jump    |  W   |  Up Arrow   |
+|  Execute  |  E   | Right Shift |
 
 The pushing of objects is done automatically when moving against an object
 
