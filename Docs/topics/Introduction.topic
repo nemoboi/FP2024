@@ -18,19 +18,19 @@
     <section-starting-page>
         <title>1 Introduction</title>
         <description>
-            Add an introductory paragraph: explain what this section is about in 2-3 short sentences.
+            The introduction into our requirements analysis
         </description>
 
         <!--    Add up to 2 topics that you want to promote. Use the "type" attribute to select an icon.    -->
         <spotlight>
-            <a href="" type="account" summary="This overrides the card summary of the topic">Custom card title</a>
+            <a href="1-4-Definitions-Acronyms-and-Abbreviations.md" type="idea" summary="Definitions for everything relevant">Definitions and Abbreviations</a>
             <a href="" type="search" summary="This overrides the card summary of the topic">Another custom title</a>
         </spotlight>
 
         <!--    Add several topics that are most important for this section.    -->
         <primary>
             <title>Get started</title>
-            <a href=""/>
+            <a href="1-4-Definitions-Acronyms-and-Abbreviations.md"/>
             <a href="" summary="With a custom card summary"/>
             <a href="">Custom card title</a>
             <a href="" summary="With a custom card summary">Custom card title</a>
