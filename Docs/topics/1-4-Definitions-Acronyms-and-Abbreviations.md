@@ -67,7 +67,7 @@ Each Blob can be moved using the keyboard, the following are the commands:
 | Run Left  |  A   | Left Arrow  |
 | Run Right |  D   | Right Arrow |
 |   Jump    |  W   |  Up Arrow   |
-|  Execute  |  E   | Right Shift |
+| Interact  |  E   | Right Shift |
 
 The pushing of objects is done automatically when moving against an object
 
