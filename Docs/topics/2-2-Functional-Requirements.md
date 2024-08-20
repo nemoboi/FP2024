@@ -47,3 +47,33 @@
 |     Description      |                                  Portals can be used to teleport whatever they are designed to teleport                                  |
 | Acceptance Criterion | When something that that portal can move touches an active input portal the object disappears and reappears at the output of that portal |
 |        Notes         |                                                                                                                                          |
+
+|          6           |                                   Settings                                   |
+|:--------------------:|:----------------------------------------------------------------------------:|
+|     Description      | Players can change the settings and save them by exiting the settings screen |
+| Acceptance Criterion |           Selecting the back-button saves all settings if accepted           |
+|        Notes         |                                                                              |
+
+|          6a          |                                                  Settings - Controls                                                   |
+|:--------------------:|:----------------------------------------------------------------------------------------------------------------------:|
+|     Description      |                                            Players can change all controls                                             |
+| Acceptance Criterion | Selecting a defined control in the settings and changing it changes it in game, every button can only be assigned once |
+|        Notes         |                                                                                                                        |
+
+|          6b          |                                        Settings - Audio                                        |
+|:--------------------:|:----------------------------------------------------------------------------------------------:|
+|     Description      |                            Players can change the audio via sliders                            |
+| Acceptance Criterion | There are three volume sliders as defined in the Definitions that affect the volume as defined |
+|        Notes         |                                                                                                |
+
+|          6c          |                                                              Settings - Resolution                                                               |
+|:--------------------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|
+|     Description      |                                                        Players can change the resolution                                                         |
+| Acceptance Criterion | Via the arrows on the settings screen the players can change the resolution to their preferred resolution and apply it using the "apply" button. |
+|        Notes         |                                                                                                                                                  |
+
+|          6d          |                                      Settings - Screentype                                       |
+|:--------------------:|:------------------------------------------------------------------------------------------------:|
+|     Description      |                         Players can change the way the game is displayed                         |
+| Acceptance Criterion | Via arrows the player can switch display options between [Fullscreen, Window, Window Borderless] |
+|        Notes         |                                                                                                  |

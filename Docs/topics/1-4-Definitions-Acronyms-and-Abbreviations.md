@@ -82,3 +82,19 @@ The beginning of the game where the Blobs are seperated during a cut scene
 ## End
 
 The end of the game where the Blobs find together again (cut scene)
+
+## Audio
+
+Sliders go from 0% to 100%
+
+<tabs>
+<tab title="Main">
+Change all volume relative to their selective sliders
+</tab>
+<tab title="SFX">
+Volume of effects
+</tab>
+<tab title="Music">
+Volume of music
+</tab>
+</tabs>
