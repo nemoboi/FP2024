@@ -75,19 +75,6 @@ it can move up to 4 grids during the jump.
 A movable object can be pushed at .7 regular speed
 </tabs>
 
-## Controls
-
-Each Blob can be moved using the keyboard, the following are the commands:
-
-|  Action   | Blob |    Blobb    |
-|:---------:|:----:|:-----------:|
-| Run Left  |  A   | Left Arrow  |
-| Run Right |  D   | Right Arrow |
-|   Jump    |  W   |  Up Arrow   |
-| Interact  |  E   | Right Shift |
-
-The pushing of objects is done automatically when moving against an object
-
 ## Player
 
 The two people controlling the Blobs
@@ -100,7 +87,9 @@ The beginning of the game where the Blobs are seperated during a cut scene
 
 The end of the game where the Blobs find together again (cut scene)
 
-## Audio
+## Settings
+
+### Audio
 
 Sliders go from 0% to 100%
 
@@ -115,3 +104,22 @@ Volume of effects
 Volume of music
 </tab>
 </tabs>
+
+### Colour
+
+Both Blobs are displayed and can be individually switched through different colours.
+
+### Controls
+
+Each Blob can be moved using the keyboard, the following are the commands:
+
+|  Action   | Blob |    Blobb    |
+|:---------:|:----:|:-----------:|
+| Run Left  |  A   | Left Arrow  |
+| Run Right |  D   | Right Arrow |
+|   Jump    |  W   |  Up Arrow   |
+| Interact  |  E   | Right Shift |
+
+The pushing of objects is done automatically when moving against an object.
+
+The command keys can be changed in settings, in a separate sub-screen.
