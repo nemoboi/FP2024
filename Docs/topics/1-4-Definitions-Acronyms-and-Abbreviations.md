@@ -58,6 +58,23 @@ Blob has to stand on button so the portal stays active
 
 The way to move between scenes
 
+## Movement and distances
+
+The following is normed to a grid under the assumption that 1 grid is the size of the 
+movable object in the first tutorial level (see storyboarding/tutorials.pdf). 
+
+<tabs>
+<tab title="Regular Movement">
+Blob moves 1.5 grids/second.
+</tab>
+<tab title="Jump">
+When jumping, Blob moves 1.2 grids up. If Blob is simultaneously moving horizontally, 
+it can move up to 4 grids during the jump.
+</tab>
+<tab title="Object"></tab>
+A movable object can be pushed at .7 regular speed
+</tabs>
+
 ## Controls
 
 Each Blob can be moved using the keyboard, the following are the commands:
@@ -67,7 +84,7 @@ Each Blob can be moved using the keyboard, the following are the commands:
 | Run Left  |  A   | Left Arrow  |
 | Run Right |  D   | Right Arrow |
 |   Jump    |  W   |  Up Arrow   |
-|  Execute  |  E   | Right Shift |
+| Interact  |  E   | Right Shift |
 
 The pushing of objects is done automatically when moving against an object
 
