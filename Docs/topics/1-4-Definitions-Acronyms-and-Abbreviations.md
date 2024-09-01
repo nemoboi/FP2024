@@ -71,8 +71,9 @@ Blob moves 1.5 grids/second.
 When jumping, Blob moves 1.2 grids up. If Blob is simultaneously moving horizontally, 
 it can move up to 4 grids during the jump.
 </tab>
-<tab title="Object"></tab>
+<tab title="Object">
 A movable object can be pushed at .7 regular speed
+</tab>
 </tabs>
 
 ## Player
