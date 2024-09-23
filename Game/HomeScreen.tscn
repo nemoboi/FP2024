@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://b7kxsj7pn1k3j"]
+
+[ext_resource type="Texture2D" uid="uid://c5geb8xj2c8hg" path="res://icon.svg" id="1_lfxe6"]
+[ext_resource type="Script" path="res://blob.cs" id="2_2534j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iosq0"]
+size = Vector2(1173, 19)
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(0, 2)
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1152.0
+offset_bottom = 646.0
+
+[node name="blob" type="Sprite2D" parent="Panel"]
+position = Vector2(20, 300)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_lfxe6")
+script = ExtResource("2_2534j")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+position = Vector2(578, 325)
+shape = SubResource("RectangleShape2D_iosq0")
