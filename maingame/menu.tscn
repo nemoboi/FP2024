@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://c438xr6jp0nuc"]
+
+[ext_resource type="Script" path="res://menu.cs" id="1_djudi"]
+
+[node name="menu" type="Node2D"]
+script = ExtResource("1_djudi")
+
+[node name="newGame" type="Button" parent="."]
+offset_left = 449.0
+offset_top = 219.0
+offset_right = 671.0
+offset_bottom = 275.0
+theme_override_font_sizes/font_size = 26
+text = "New Game"
+
+[node name="quit" type="Button" parent="."]
+offset_left = 496.0
+offset_top = 402.0
+offset_right = 621.0
+offset_bottom = 433.0
+text = "Abandon Blobs"
+
+[node name="settings" type="Button" parent="."]
+offset_left = 1067.0
+offset_top = 16.0
+offset_right = 1137.0
+offset_bottom = 47.0
+text = "Settings
+Icon tbd"
+
+[node name="savedGames" type="Button" parent="."]
+offset_left = 501.0
+offset_top = 333.0
+offset_right = 613.0
+offset_bottom = 364.0
+text = "Saved Games"
+
+[connection signal="pressed" from="newGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="savedGames" to="." method="_on_saved_games_pressed"]

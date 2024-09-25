@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://bh8rxld7u0157"]
+
+[ext_resource type="Script" path="res://miau.cs" id="1_elsjw"]
+
+[node name="miau" type="Node2D"]
+script = ExtResource("1_elsjw")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 1160.0
+offset_bottom = 587.0
+
+[node name="TextEdit" type="TextEdit" parent="Panel"]
+layout_mode = 0
+offset_left = 381.0
+offset_top = 309.0
+offset_right = 774.0
+offset_bottom = 379.0
+theme_override_font_sizes/font_size = 30
+text = "You didn't make that yet"
+
+[node name="backButton" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 548.0
+offset_top = 412.0
+offset_right = 593.0
+offset_bottom = 443.0
+text = "back"
+
+[connection signal="pressed" from="Panel/backButton" to="." method="_on_back_button_pressed"]

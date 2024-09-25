@@ -1,0 +1,22 @@
+[gd_scene load_steps=2 format=3 uid="uid://bgntmt52ylvxp"]
+
+[ext_resource type="Script" path="res://saved_games.cs" id="1_jm54n"]
+
+[node name="saved_games" type="Node2D"]
+script = ExtResource("1_jm54n")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 168.0
+offset_top = 86.0
+offset_right = 895.0
+offset_bottom = 366.0
+placeholder_text = "Three saved games for uuuu"
+
+[node name="backButton" type="Button" parent="."]
+offset_left = 424.0
+offset_top = 218.0
+offset_right = 469.0
+offset_bottom = 249.0
+text = "back"
+
+[connection signal="pressed" from="backButton" to="." method="_on_back_button_pressed"]
