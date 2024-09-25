@@ -1,27 +1,79 @@
-[gd_scene load_steps=4 format=3 uid="uid://b7kxsj7pn1k3j"]
+[gd_scene load_steps=9 format=3 uid="uid://b7kxsj7pn1k3j"]
 
 [ext_resource type="Texture2D" uid="uid://c5geb8xj2c8hg" path="res://icon.svg" id="1_lfxe6"]
 [ext_resource type="Script" path="res://blob.cs" id="2_2534j"]
+[ext_resource type="Script" path="res://blobBody.cs" id="3_megsr"]
+[ext_resource type="Texture2D" uid="uid://dwcspep8sbgls" path="res://proto-blob-right.png" id="3_uicfi"]
+[ext_resource type="Texture2D" uid="uid://bq6xlrebrg00m" path="res://proto-map.png" id="4_aajmm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iosq0"]
-size = Vector2(1173, 19)
+[sub_resource type="CircleShape2D" id="CircleShape2D_di5lj"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jpa2c"]
+resource_name = "proto"
+texture = ExtResource("4_aajmm")
+texture_region_size = Vector2i(32, 32)
+9:1/size_in_atlas = Vector2i(4, 4)
+9:1/0 = 0
+9:1/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+9:1/0/physics_layer_0/angular_velocity = 0.0
+11:6/size_in_atlas = Vector2i(9, 4)
+11:6/0 = 0
+11:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+11:6/0/physics_layer_0/angular_velocity = 0.0
+20:3/size_in_atlas = Vector2i(6, 8)
+20:3/0 = 0
+20:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+20:3/0/physics_layer_0/angular_velocity = 0.0
+0:12/size_in_atlas = Vector2i(37, 2)
+0:12/0 = 0
+0:12/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:12/0/physics_layer_0/angular_velocity = 0.0
+26:6/size_in_atlas = Vector2i(5, 5)
+26:6/0 = 0
+26:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+26:6/0/physics_layer_0/angular_velocity = 0.0
+26:3/size_in_atlas = Vector2i(4, 3)
+26:3/0 = 0
+26:3/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+26:3/0/physics_layer_0/angular_velocity = 0.0
+7:7/0 = 0
+7:7/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+7:7/0/physics_layer_0/angular_velocity = 0.0
+2:6/size_in_atlas = Vector2i(4, 3)
+2:6/0 = 0
+2:6/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+2:6/0/physics_layer_0/angular_velocity = 0.0
+
+[sub_resource type="TileSet" id="TileSet_cxfyr"]
+physics_layer_0/collision_layer = 35
+sources/0 = SubResource("TileSetAtlasSource_jpa2c")
 
 [node name="Node2D" type="Node2D"]
 position = Vector2(0, 2)
 
 [node name="Panel" type="Panel" parent="."]
-offset_right = 1152.0
-offset_bottom = 646.0
+offset_right = 1200.0
+offset_bottom = 650.0
 
-[node name="blob" type="Sprite2D" parent="Panel"]
+[node name="blob" type="Sprite2D" parent="."]
 position = Vector2(20, 300)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_lfxe6")
 script = ExtResource("2_2534j")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-gravity_scale = 0.0
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(100, 300)
+script = ExtResource("3_megsr")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-position = Vector2(578, 325)
-shape = SubResource("RectangleShape2D_iosq0")
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("3_uicfi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+scale = Vector2(2, 2)
+shape = SubResource("CircleShape2D_di5lj")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_cxfyr")
+rendering_quadrant_size = 32
+format = 2
+layer_0/tile_data = PackedInt32Array(1310756, 0, 12, 1310770, 0, 12, 1179695, 720896, 6, 2621480, 0, 12, 2621479, 0, 12, 2621478, 0, 12, 2621477, 0, 12, 2621476, 0, 12, 2621475, 0, 12, 2162738, 1310720, 3, 2359339, 1703936, 6, 2031660, 1703936, 3, 2490400, 720896, 6, 1048634, 1703936, 6)
