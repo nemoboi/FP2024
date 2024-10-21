@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://hsf8anumeyss"]
+
+[ext_resource type="Script" path="res://Players/Blobb.cs" id="1_8265g"]
+[ext_resource type="Texture2D" uid="uid://k4fv1rtpi6co" path="res://Sprites/icon.svg" id="2_4rsg2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqbsh"]
+size = Vector2(128, 128)
+
+[node name="Blobb" type="CharacterBody2D"]
+script = ExtResource("1_8265g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 1, 1)
+texture = ExtResource("2_4rsg2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rqbsh")
