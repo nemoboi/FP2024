@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs1ekebuq0yll"
-path="res://.godot/imported/yellowblob.png-06738709966317304bc496ba2dfe7ea7.ctex"
+uid="uid://dte727d4or3cp"
+path="res://.godot/imported/walksmall.png-70b1105c6440921323462cb41f232597.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/yellowblob.png"
-dest_files=["res://.godot/imported/yellowblob.png-06738709966317304bc496ba2dfe7ea7.ctex"]
+source_file="res://Art/blob/walksmall.png"
+dest_files=["res://.godot/imported/walksmall.png-70b1105c6440921323462cb41f232597.ctex"]
 
 [params]
 

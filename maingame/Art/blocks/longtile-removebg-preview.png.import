@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k54giqoq6a1h"
-path="res://.godot/imported/purpleblobdown-removebg-preview.png-fd3798932b1038fde08291ae151504ec.ctex"
+uid="uid://chvsi34qcn5vb"
+path="res://.godot/imported/longtile-removebg-preview.png-c29a63ac0f986b18178347b04ddf463b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/purpleblobdown-removebg-preview.png"
-dest_files=["res://.godot/imported/purpleblobdown-removebg-preview.png-fd3798932b1038fde08291ae151504ec.ctex"]
+source_file="res://Art/blocks/longtile-removebg-preview.png"
+dest_files=["res://.godot/imported/longtile-removebg-preview.png-c29a63ac0f986b18178347b04ddf463b.ctex"]
 
 [params]
 

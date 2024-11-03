@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddgbowy5i52bu"
-path="res://.godot/imported/purpleblobsmall.png-30580609a1dad8c15fba6ee6a7715631.ctex"
+path="res://.godot/imported/purpleblobsmall.png-43d6ee62e81c8ca25fb6029b6b5fe60b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/purpleblobsmall.png"
-dest_files=["res://.godot/imported/purpleblobsmall.png-30580609a1dad8c15fba6ee6a7715631.ctex"]
+source_file="res://Art/blob/purpleblobsmall.png"
+dest_files=["res://.godot/imported/purpleblobsmall.png-43d6ee62e81c8ca25fb6029b6b5fe60b.ctex"]
 
 [params]
 

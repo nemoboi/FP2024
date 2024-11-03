@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d4fprsui2quyx"
-path="res://.godot/imported/yellowblobup-removebg-preview.png-5c751c95845484b141df663b13f34648.ctex"
+uid="uid://kwarbw3d2t2q"
+path="res://.godot/imported/purpleblobup.png-b717381305f51277805d4073c341dde2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/yellowblobup-removebg-preview.png"
-dest_files=["res://.godot/imported/yellowblobup-removebg-preview.png-5c751c95845484b141df663b13f34648.ctex"]
+source_file="res://Art/blob/purpleblobup.png"
+dest_files=["res://.godot/imported/purpleblobup.png-b717381305f51277805d4073c341dde2.ctex"]
 
 [params]
 

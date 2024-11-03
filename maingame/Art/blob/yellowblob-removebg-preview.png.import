@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q7w7tpy8riak"
-path="res://.godot/imported/yellowblobstay-removebg-preview.png-3cb9e5b7945d5f3a06f964d497ea83a4.ctex"
+uid="uid://drohnndt1xt7x"
+path="res://.godot/imported/yellowblob-removebg-preview.png-131d658859c64340399c22a8bf6b7cf9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/yellowblobstay-removebg-preview.png"
-dest_files=["res://.godot/imported/yellowblobstay-removebg-preview.png-3cb9e5b7945d5f3a06f964d497ea83a4.ctex"]
+source_file="res://Art/blob/yellowblob-removebg-preview.png"
+dest_files=["res://.godot/imported/yellowblob-removebg-preview.png-131d658859c64340399c22a8bf6b7cf9.ctex"]
 
 [params]
 

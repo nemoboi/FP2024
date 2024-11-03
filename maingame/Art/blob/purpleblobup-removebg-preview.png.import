@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duuqhj0nig22q"
-path="res://.godot/imported/purpleblobdown.png-974439426801bf6bad315cdcf5864aea.ctex"
+uid="uid://cwd3a40l18dhi"
+path="res://.godot/imported/purpleblobup-removebg-preview.png-5e998fbab7023d2556d48b96c5e92bb7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/purpleblobdown.png"
-dest_files=["res://.godot/imported/purpleblobdown.png-974439426801bf6bad315cdcf5864aea.ctex"]
+source_file="res://Art/blob/purpleblobup-removebg-preview.png"
+dest_files=["res://.godot/imported/purpleblobup-removebg-preview.png-5e998fbab7023d2556d48b96c5e92bb7.ctex"]
 
 [params]
 

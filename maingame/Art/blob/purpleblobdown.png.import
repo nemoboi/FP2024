@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dte727d4or3cp"
-path="res://.godot/imported/walksmall.png-ada54edc14b2393424f4a07c247f0ca2.ctex"
+uid="uid://duuqhj0nig22q"
+path="res://.godot/imported/purpleblobdown.png-14f670e71b1ee564cd78039068db7687.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/walksmall.png"
-dest_files=["res://.godot/imported/walksmall.png-ada54edc14b2393424f4a07c247f0ca2.ctex"]
+source_file="res://Art/blob/purpleblobdown.png"
+dest_files=["res://.godot/imported/purpleblobdown.png-14f670e71b1ee564cd78039068db7687.ctex"]
 
 [params]
 
