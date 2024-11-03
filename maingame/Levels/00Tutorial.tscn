@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://ct6isx3xeusmm"]
+[gd_scene load_steps=7 format=4 uid="uid://ct6isx3xeusmm"]
 
 [ext_resource type="Texture2D" uid="uid://k4fv1rtpi6co" path="res://Sprites/icon.svg" id="1_j728q"]
 [ext_resource type="PackedScene" uid="uid://bouvce4t7usrp" path="res://Players/Blob.tscn" id="2_kieof"]
-[ext_resource type="PackedScene" uid="uid://hsf8anumeyss" path="res://Players/Blobb.tscn" id="3_cusoa"]
+[ext_resource type="PackedScene" uid="uid://bqv6o1v46q4wl" path="res://Players/Blobb.tscn" id="4_n3qor"]
+[ext_resource type="Script" path="res://Players/Blobb.cs" id="4_tx8yp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mrr5t"]
 texture = ExtResource("1_j728q")
@@ -24,5 +25,6 @@ tile_set = SubResource("TileSet_tqcxs")
 [node name="Blob" parent="." instance=ExtResource("2_kieof")]
 position = Vector2(415, 349)
 
-[node name="Blobb" parent="." instance=ExtResource("3_cusoa")]
-position = Vector2(211, 377)
+[node name="Blobb" parent="." instance=ExtResource("4_n3qor")]
+position = Vector2(216, 374)
+script = ExtResource("4_tx8yp")

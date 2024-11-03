@@ -1,17 +1,108 @@
-[gd_scene load_steps=4 format=3 uid="uid://hsf8anumeyss"]
+[gd_scene load_steps=9 format=3 uid="uid://bqv6o1v46q4wl"]
 
-[ext_resource type="Script" path="res://Players/Blobb.cs" id="1_8265g"]
-[ext_resource type="Texture2D" uid="uid://k4fv1rtpi6co" path="res://Sprites/icon.svg" id="2_4rsg2"]
+[ext_resource type="Texture2D" uid="uid://d4fprsui2quyx" path="res://Art/yellowblobup-removebg-preview.png" id="1_5mj10"]
+[ext_resource type="Texture2D" uid="uid://drohnndt1xt7x" path="res://Art/yellowblob-removebg-preview.png" id="2_vfqhn"]
+[ext_resource type="Texture2D" uid="uid://q7w7tpy8riak" path="res://Art/yellowblobstay-removebg-preview.png" id="3_ynkph"]
+[ext_resource type="Texture2D" uid="uid://3s58odnd3alw" path="res://Art/walksmall-removebg-preview.png" id="4_vhwg4"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_5pe6i"]
+script/source = "using Godot;
+using System;
+
+public partial class Blobb : CharacterBody2D
+{
+	public const float Speed = 300.0f;
+	public const float JumpVelocity = -400.0f;
+	private AnimatedSprite2D _animatedSprite;
+	
+	public override void _Ready(){
+		_animatedSprite = GetNode<AnimatedSprite2D>(\"AnimatedSprite2D\");
+	}
+	
+	// name delta deltaT because it's the time between the frames
+	public override void _PhysicsProcess(double deltaT)
+	{
+		
+		// handle movement of blobb
+		
+		Vector2 velocity = Velocity;
+
+		// add gravity
+		if (!IsOnFloor())
+		{
+			velocity += GetGravity() * (float)deltaT;
+		}
+
+		// handle Jump
+		else if (Input.IsActionJustPressed(\"blobb_jump\") && IsOnFloor())
+		{
+			_animatedSprite.Play(\"jump\");
+			velocity.Y = JumpVelocity;
+		} else {
+			_animatedSprite.Stop();
+		}
+
+		// get input direction using inputs and handle the movement/deceleration
+		// move left and right
+		Vector2 direction = Input.GetVector(\"blobb_left\", \"blobb_right\", \"ui_up\", \"ui_down\");
+		
+		if (direction != Vector2.Zero)
+		{
+			velocity.X = direction.X * Speed;
+		}
+		else
+		{
+			velocity.X = Mathf.MoveToward(Velocity.X, 0, Speed);
+		}
+
+		Velocity = velocity;
+		MoveAndSlide();
+	}
+}
+"
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_scmim"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rqbsh"]
-size = Vector2(128, 128)
+size = Vector2(249, 223)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_31q6f"]
+animations = [{
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("2_vfqhn")
+}, {
+"duration": 2.0,
+"texture": ExtResource("1_5mj10")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 2.0,
+"texture": ExtResource("3_ynkph")
+}, {
+"duration": 2.0,
+"texture": ExtResource("4_vhwg4")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
 
 [node name="Blobb" type="CharacterBody2D"]
-script = ExtResource("1_8265g")
+script = SubResource("CSharpScript_5pe6i")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 0, 1, 1)
-texture = ExtResource("2_4rsg2")
+texture = SubResource("AnimatedTexture_scmim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-37.5, 28.5)
 shape = SubResource("RectangleShape2D_rqbsh")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_31q6f")
+animation = &"walk"
+frame_progress = 0.503965
