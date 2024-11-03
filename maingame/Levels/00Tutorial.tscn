@@ -23,8 +23,8 @@ tile_map_data = PackedByteArray("AAAAAAQAAgAAAAAAAAABAAQAAgAAAAAAAAACAAQAAgAAAAA
 tile_set = SubResource("TileSet_tqcxs")
 
 [node name="Blob" parent="." instance=ExtResource("2_kieof")]
-position = Vector2(415, 349)
+position = Vector2(268, 392)
 
 [node name="Blobb" parent="." instance=ExtResource("4_n3qor")]
-position = Vector2(216, 374)
+position = Vector2(-1, 1)
 script = ExtResource("4_tx8yp")

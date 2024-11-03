@@ -6,6 +6,12 @@ public partial class Blob : CharacterBody2D
 	public const float Speed = 300.0f;
 	public const float JumpVelocity = -400.0f;
 	
+	private AnimatedSprite2D _animatedSprite;
+	
+	public override void _Ready(){
+		_animatedSprite = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+	}
+	
 	// name delta deltaT because it's the time between the frames
 	public override void _PhysicsProcess(double deltaT)
 	{
@@ -24,6 +30,9 @@ public partial class Blob : CharacterBody2D
 		else if (Input.IsActionJustPressed("blob_jump") && IsOnFloor())
 		{
 			velocity.Y = JumpVelocity;
+			_animatedSprite.Play("jump");
+		} else {
+			_animatedSprite.Stop();
 		}
 
 		// get input direction using inputs and handle the movement/deceleration
