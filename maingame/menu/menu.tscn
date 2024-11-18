@@ -1,0 +1,77 @@
+[gd_scene load_steps=4 format=3 uid="uid://d0rowwrq0f6ek"]
+
+[ext_resource type="Texture2D" uid="uid://cw1ggyvvvy4ws" path="res://menu/icons/settings_icon.png" id="1_k3cy6"]
+[ext_resource type="Script" path="res://menu/Menu.cs" id="1_ulvas"]
+[ext_resource type="Texture2D" uid="uid://bjxp85122hj66" path="res://menu/icons/settings_icon_hover.png" id="3_1k2ds"]
+
+[node name="Menu" type="Node2D"]
+script = ExtResource("1_ulvas")
+
+[node name="newGame" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 426.0
+offset_top = 345.0
+offset_right = 726.0
+offset_bottom = 425.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "New Game"
+
+[node name="savedGames" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 477.5
+offset_top = 438.5
+offset_right = 677.5
+offset_bottom = 488.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Saved Games"
+
+[node name="quit" type="Button" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 477.5
+offset_top = 502.5
+offset_right = 677.5
+offset_bottom = 552.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 20
+text = "Abandon Blobs"
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="quit"]
+initial_position = 1
+size = Vector2i(214, 106)
+visible = true
+ok_button_text = "Yes"
+dialog_text = "Are you sure  you want to
+abandon Blob and Blobb?"
+cancel_button_text = "Nevermind"
+
+[node name="settings" type="TextureButton" parent="."]
+custom_minimum_size = Vector2(30, 30)
+offset_left = 1080.0
+offset_top = 20.0
+offset_right = 1592.0
+offset_bottom = 532.0
+scale = Vector2(0.1, 0.1)
+texture_normal = ExtResource("1_k3cy6")
+texture_hover = ExtResource("3_1k2ds")
+
+[connection signal="pressed" from="newGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="savedGames" to="." method="_on_saved_games_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="settings" to="." method="_on_settings_pressed"]
