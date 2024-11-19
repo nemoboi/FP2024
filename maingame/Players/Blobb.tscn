@@ -1,9 +1,9 @@
 [gd_scene load_steps=9 format=3 uid="uid://bqv6o1v46q4wl"]
 
-[ext_resource type="Texture2D" uid="uid://d4fprsui2quyx" path="res://Art/blob/yellowblobup-removebg-preview.png" id="1_5mj10"]
-[ext_resource type="Texture2D" uid="uid://drohnndt1xt7x" path="res://Art/blob/yellowblob-removebg-preview.png" id="2_vfqhn"]
-[ext_resource type="Texture2D" uid="uid://q7w7tpy8riak" path="res://Art/blob/yellowblobstay-removebg-preview.png" id="3_ynkph"]
-[ext_resource type="Texture2D" uid="uid://3s58odnd3alw" path="res://Art/blob/walksmall-removebg-preview.png" id="4_vhwg4"]
+[ext_resource type="Texture2D" uid="uid://d4fprsui2quyx" path="res://assets/blob/yellowblobup-removebg-preview.png" id="1_5mj10"]
+[ext_resource type="Texture2D" uid="uid://drohnndt1xt7x" path="res://assets/blob/yellowblob-removebg-preview.png" id="2_vfqhn"]
+[ext_resource type="Texture2D" uid="uid://q7w7tpy8riak" path="res://assets/blob/yellowblobstay-removebg-preview.png" id="3_ynkph"]
+[ext_resource type="Texture2D" uid="uid://3s58odnd3alw" path="res://assets/blob/walksmall-removebg-preview.png" id="4_vhwg4"]
 
 [sub_resource type="CSharpScript" id="CSharpScript_5pe6i"]
 script/source = "using Godot;
