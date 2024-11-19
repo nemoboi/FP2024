@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://xmj3xil0mjfp"]
 
-[ext_resource type="Texture2D" uid="uid://chvsi34qcn5vb" path="res://Art/blocks/longtile-removebg-preview.png" id="1_el71v"]
+[ext_resource type="Texture2D" uid="uid://chvsi34qcn5vb" path="res://assets/blocks/longtile-removebg-preview.png" id="1_el71v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y4b0i"]
 size = Vector2(173, 42)
