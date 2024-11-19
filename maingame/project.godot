@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="maingame"
+run/main_scene="res://Levels/00Tutorial.tscn"
 config/features=PackedStringArray("4.3", "C#", "Forward Plus")
 config/icon="res://Sprites/icon.svg"
 
