@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dhlyhtpl3fyw5" path="res://assets/icons/quit.png" id="7_mxoof"]
 [ext_resource type="Texture2D" uid="uid://bprgaollksgdy" path="res://assets/icons/quit_hover.png" id="8_fmiax"]
 [ext_resource type="Texture2D" uid="uid://cw1ggyvvvy4ws" path="res://assets/icons/settings_icon.png" id="9_3os1s"]
-[ext_resource type="Texture2D" uid="uid://bjxp85122hj66" path="res://assets/icons/settings_icon_hover.png" id="10_86yxj"]
+[ext_resource type="Texture2D" uid="uid://ca1xrt8v17njw" path="res://assets/icons/settings_hover.png" id="10_86yxj"]
 
 [node name="Menu" type="Node2D"]
 script = ExtResource("1_qpnoq")
