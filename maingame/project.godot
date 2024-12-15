@@ -19,6 +19,10 @@ config/icon="res://assets/blob/purpleblob.png"
 
 project/assembly_name="maingame"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg")
+
 [input]
 
 blob_left={
