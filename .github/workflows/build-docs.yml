@@ -12,8 +12,7 @@ on:
 
 env:
   INSTANCE: 'documentation/r'
-  ARTIFACT: 'webHelpRA2-all.zip'
-  DOCKER_VERSION: '241.18775'
+  DOCKER_VERSION: '243.22562'
 
 jobs:
   build:
