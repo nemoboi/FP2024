@@ -23,7 +23,8 @@ public partial class Mainmenu : Node2D
 	}
 	private void _on_settings_pressed() {
 		GD.Print("Switch to settings screen");
-		// GetTree().ChangeSceneToFile("res://menu/settings.tscn");
+		GetTree().ChangeSceneToFile("res://menu/settings.tscn");
+
 	}
 	private void _on_quit_pressed() {
 		GD.Print("Game quit");
