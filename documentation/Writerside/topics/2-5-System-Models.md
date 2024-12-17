@@ -1,3 +1,3 @@
-# 2.5 System models
+# 2.5 System Models
 
 Start typing here...

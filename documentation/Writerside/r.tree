@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE instance-profile
+        SYSTEM "https://resources.jetbrains.com/writerside/1.0/product-profile.dtd">
+
+<instance-profile id="r"
+                 name="requirements-analysis"
+                 start-page="1-introduction.md">
+
+    <toc-element topic="1-introduction.md"/>
+    <toc-element topic="2-Proposed-System.md">
+        <toc-element topic="2-1-Overview.md"/>
+        <toc-element topic="2-2-Functional-Requirements.md"/>
+        <toc-element topic="2-3-Nonfunctional-Requirements.md"/>
+        <toc-element topic="2-4-Pseudo-Requirements.md"/>
+        <toc-element topic="2-5-System-Models.md">
+            <toc-element topic="2-5-1-Storyboard.md"/>
+            <toc-element topic="2-5-2-Use-Case-Model.md"/>
+            <toc-element topic="2-5-3-Object-Model.md"/>
+        </toc-element>
+    </toc-element>
+    <toc-element topic="3-Glossary.md"/>
+</instance-profile>
