@@ -9,7 +9,7 @@ public partial class Tutorial01 : Node2D
 	}
 	private void _on_quitlevel_pressed(){
 		GD.Print("back to menu");
-		GetTree().ChangeSceneToFile("res://menu/menu.tscn");
+		GetTree().ChangeSceneToFile("res://menu/Mainmenu.tscn");
 	}
 	
 	// Called when the node enters the scene tree for the first time.
