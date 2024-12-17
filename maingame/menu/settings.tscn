@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bt07cgbm1cy2y"]
+
+[ext_resource type="Script" path="res://menu/Settings.cs" id="1_vfhjo"]
+[ext_resource type="Texture2D" uid="uid://4eb3r27ahq5g" path="res://assets/background/background01.jpg" id="2_afg6f"]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vfhjo")
+
+[node name="background" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+texture = ExtResource("2_afg6f")
+
+[node name="back" type="Button" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 18.0
+offset_right = 109.0
+offset_bottom = 58.0
+text = "BACK"
+
+[node name="switch_blob_left" type="Button" parent="."]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 151.0
+offset_right = 342.0
+offset_bottom = 347.0
+text = "Left
+"
+
+[node name="switch_blob_right" type="Button" parent="."]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 110.0
+offset_right = 730.0
+offset_bottom = 181.0
+text = "right
+"
+
+[node name="switch_blob_jump" type="Button" parent="."]
+layout_mode = 0
+offset_left = 847.0
+offset_top = 171.0
+offset_right = 963.0
+offset_bottom = 489.0
+text = "jump"
+
+[node name="switch_blob_interact" type="Button" parent="."]
+layout_mode = 0
+offset_left = 426.0
+offset_top = 333.0
+offset_right = 667.0
+offset_bottom = 447.0
+text = "interact"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

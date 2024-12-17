@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Menu : Node2D
+public partial class Mainmenu : Node2D
 {
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -23,7 +23,7 @@ public partial class Menu : Node2D
 	}
 	private void _on_settings_pressed() {
 		GD.Print("Switch to settings screen");
-		// GetTree().ChangeSceneToFile("res://menu/settings.tscn");
+		GetTree().ChangeSceneToFile("res://menu/settings.tscn");
 	}
 	private void _on_quit_pressed() {
 		GD.Print("Game quit");
