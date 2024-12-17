@@ -7,7 +7,7 @@ permissions:
 
 on:
   push:
-    branches: ["main", "fix-build-process"]
+    branches: ["main"]
   workflow_dispatch:
 
 env:
