@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  INSTANCE: 'documentation/r'
+  INSTANCE: 'r'
   DOCKER_VERSION: '243.22562'
 
 jobs:

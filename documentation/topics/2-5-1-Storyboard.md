@@ -1,3 +1,0 @@
-# 2.5.1 Storyboard
-
-Start typing here...
