@@ -1,6 +1,6 @@
 # 1 Introduction
 
-This is the requirements analysis for the indie-game "[TITLE".
+This is the requirements analysis for the indie-game "[TITLE]".
 
 The game is to be played by 2 players using the same keyboard.
 [insert more text here (just make it sound nice)]
@@ -36,12 +36,54 @@ After the following things are achieved the project is considered completed:
 - 2D: two-dimensional
 - 1 grid: the size of one tile in the tile map
 - HUD: Heads-Up Display
+- CoOp: Cooperative Gaming
 
 ## 1.5 References
 
-- Writerside Documentation: https://www.jetbrains.com/help/writerside/getting-started.html
+- [Writerside Documentation](https://www.jetbrains.com/help/writerside/getting-started.html)
 
-## 1.6 Overview
+## 1.6 Roadmap
+
+This roadmap provides a timeline of key milestones, deliverables, and activities throughout the project lifecycle.
+
+### Setup (06.01.)
+- **Requirements** and initial **Diagrams**
+- **Basic forms for assets** (e.g., placeholder designs)
+- Prototype mechanics for **basic movement** (Requirements 1a-?)
+
+### Prototype Development (13.01.)
+- **Level backgrounds** for the tutorial levels in Unity
+- Prototype mechanics for:
+    - **Switch interactions**
+    - **Button interactions**
+    - **Portal mechanics**
+
+### CoOp Prototype (20.01.)
+- Prototype mechanics for **CoOp**
+
+### First Playable Version (01.02.)
+- **Tutorial levels** playable (without save functionality or a start menu)
+- First **6 level designs**
+
+### Start Menu and More Playable Levels (15.02.)
+- **Start menu** implemented
+- First **6 levels** playable
+- Remaining **6 level designs**
+
+### Visuals and more levels (01.03.)
+- **Settings menu** implemented
+- Game is playable in its entirety (**Start menu to final level**)
+- **Animations and sprite and background designs** finalized
+
+### Final Touches (15.03.)
+- **Save and load functionality** implemented
+- Animations, sprites, and backgrounds are in their **final form** within Unity
+
+### Final Tests (01.04.)
+- **Crash tests** conducted
+- **Play tests** for feedback and improvements conducted
+
+## 1.7 Overview
 
 This document provides a detailed documentation of the requirements that this game needs to fulfill.
 

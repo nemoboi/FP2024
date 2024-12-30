@@ -6,4 +6,4 @@ The game must be built using Unity
 
 ## Scheduling Constraints
 
-The game must be finished by [Month] 2025
+The game must be finished by May 2025
