@@ -91,3 +91,18 @@ SAT --> OT
     AAT --> OT
     AAT --> BST
 ```
+
+```Mermaid
+graph TD
+    Player["Player"] --> Left["Move Left"]
+    Player --> Right["Move Right"]
+    Player --> Jump["Jump"]
+
+    Left -.-> MoveObject["Move Object"]:::extended
+    Right -.-> MoveObject["Move Object"]:::extended
+    Jump -.-> Teleport["Teleport"]:::extended
+
+    classDef extended fill:#f9f,stroke:#333,stroke-width:2;
+
+```
+
