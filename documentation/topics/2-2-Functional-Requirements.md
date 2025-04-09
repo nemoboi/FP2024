@@ -1,18 +1,18 @@
 # 2.2 Functional Requirements
 
 ## Blob Movement
-|           1            |                                             Blob Movement - X-Axis                                             |
-|:----------------------:|:--------------------------------------------------------------------------------------------------------------:|
-|      Description       |                                         Blobs can move left and right                                          |
-|  Acceptance Criterion  | When the corresponding button is pressed the according Blob moves 1.5 grids/second into the correct direction. |
-|         Notes          |                            The referenced (~/~) controls correlate to (Blob/Blobb)                             |
+|          1           |                                             Blob Movement - X-Axis                                             |
+|:--------------------:|:--------------------------------------------------------------------------------------------------------------:|
+|     Description      |                                         Blobs can move left and right                                          |
+| Acceptance Criterion | When the corresponding button is pressed the according Blob moves 1.5 grids/second into the correct direction. |
+|        Notes         |                           The referenced (~ / ~) controls correlate to (Blob/Blobb)                            |
 
 
 |          1a          |                       Blob Movement          -    X-Axis - Left                       |
 |:--------------------:|:-------------------------------------------------------------------------------------:|
 |     Description      |                              Blobs can move to the left                               |
 | Acceptance Criterion | When (A/Left Arrow) is pressed the according Blob moves 1.5 grids/second to the left. |
-|        Notes         |                The referenced (~/~) controls correlate to (Blob/Blobb)                |
+|        Notes         |               The referenced (~ / ~) controls correlate to (Blob/Blobb)               |
 
 
 
@@ -21,7 +21,7 @@
 |:--------------------:|:---------------------------------------------------------------------------------------:|
 |     Description      |                               Blobs can move to the right                               |
 | Acceptance Criterion | When (D/Right Arrow) is pressed the according Blob moves 1.5 grids/second to the right. |
-|        Notes         |                 The referenced (~/~) controls correlate to (Blob/Blobb)                 |
+|        Notes         |                The referenced (~ / ~) controls correlate to (Blob/Blobb)                |
 
 ## Blob Jump
 
@@ -29,7 +29,7 @@
 |:--------------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |     Description      |                                                                                         Blobs can jump                                                                                         |
 | Acceptance Criterion | When (W/Up Arrow) is pressed the according Blob moves 1.2 grids in 1 second up and jump is disabled. If Blob is simultaneously moving horizontally, it can move up to 4 grids during the jump. |
-|        Notes         |                                                                    The referenced (~/~) controls correlate to (Blob/Blobb)                                                                     |
+|        Notes         |                                                                   The referenced (~ / ~) controls correlate to (Blob/Blobb)                                                                    |
 
 ## Blob Interaction
 
@@ -37,7 +37,7 @@
 |:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |     Description      |                                                        Blobs can interact with switches and buttons                                                         |
 | Acceptance Criterion | If the distance between Blob and a switch or button is less than 0.5 grids and the player presses (E/Right Control) the button or switch change their state |
-|        Notes         |                                                   The referenced (~/~) controls correlate to (Blob/Blobb)                                                   |
+|        Notes         |                                                  The referenced (~ / ~) controls correlate to (Blob/Blobb)                                                  |
 
 ## Blob Push
 
@@ -89,37 +89,55 @@
 | Acceptance Criterion |  At the defined start and end, players are presented with a cutscene. At the end, a win screen is displayed.  |
 |        Notes         |                           The cutscenes provide narrative context for the gameplay.                                                                            |
 
-|          5           |                                                                 Portals                                                                  |
+|          5           |                            Switching Levels                             |
+|:--------------------:|:-----------------------------------------------------------------------:|
+|     Description      |     When both Blobs are ready the game should load the next level.      |
+| Acceptance Criterion | When both Players have entered a Transitioner the next level is loaded. |
+|        Notes         |                                                                         |
+
+|          5a          |                              Switching Levels - Transitioners                              |
+|:--------------------:|:------------------------------------------------------------------------------------------:|
+|     Description      |               When both Blobs are ready the game should load the next level                |
+| Acceptance Criterion | In each level there are two Transitioner Game Objects, each is only reachable by one Blob. |
+|        Notes         |                           This is implementable by level design                            |
+
+|          5b          |                                                                                                        Switching Levels - Entering/Exiting Transitioner                                                                                                         |
+|:--------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+|     Description      |                                                                      When a Blob enters a transitioner it should disappear, but be able to reappear until both have entered a transitioner                                                                      |
+| Acceptance Criterion | A Blob can leave a Transitioner as long as the amount of Blobs in Transitioners is < 2. When a Blob enters a Transitioner and the amount of Blobs is = 2 the next level is loaded in. When the Transitioner is rotated by 90° it can only be exited by jumping. |
+|        Notes         |                                                                                                                                                                                                                                                                 |
+
+|          6           |                                                                 Portals                                                                  |
 |:--------------------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
 |     Description      |                                  Portals can be used to teleport objects or entities designated for teleportation.                                 |
 | Acceptance Criterion | When an eligible object touches the input portal, it disappears and reappears at the output portal.|
 |        Notes         |                                                         Portals are paired and only function when active.                                                                                 |
 
-|          6           |                                   Settings                                   |
+|          7           |                                   Settings                                   |
 |:--------------------:|:----------------------------------------------------------------------------:|
 |     Description      | Players can change the settings and save them by exiting the settings screen |
 | Acceptance Criterion |           Selecting the back-button saves all settings if accepted           |
 |        Notes         |                                                                              |
 
-|          6a          |                                                                        Settings - Controls                                                                        |
+|          7a          |                                                                        Settings - Controls                                                                        |
 |:--------------------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 |     Description      |                                                                  Players can customize key bindings.                                                               |
 | Acceptance Criterion | Players can select actions (e.g., Run Left, Jump) and assign keys or buttons. Each key or button can only be assigned to one action at a time. |
 |        Notes         |                                                                       Customization is saved upon exiting the settings menu.                                                                                             |
 
-|          6b          |                                            Settings - Audio                                             |
+|          7b          |                                            Settings - Audio                                             |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------:|
 |     Description      |                             Players can adjust audio levels using sliders.                              |
 | Acceptance Criterion | Players can adjust sliders for Main, SFX, and Music volumes (0%-100%). Changes take effect immediately. |
 |        Notes         |                           Default audio settings are 100% on initial launch.                            |
 
-|          6c          |                                             Settings - Resolution                                             |
+|          7c          |                                             Settings - Resolution                                             |
 |:--------------------:|:-------------------------------------------------------------------------------------------------------------:|
 |     Description      |                                    Players can change the game resolution.                                    |
 | Acceptance Criterion |  Players can use arrows to switch between available resolutions and apply changes using the "Apply" button.   |
 |        Notes         | Resolution changes do not require restarting the game. Default Resolution is 1920 x 1080 upon initial launch. |
 
-|          6d          |                                      Settings - Screentype                                      |
+|          7d          |                                      Settings - Screentype                                      |
 |:--------------------:|:-----------------------------------------------------------------------------------------------:|
 |     Description      |                             Players can adjust screen display mode.                             |
 | Acceptance Criterion |                                                Players can toggle between [Fullscreen, Windowed, and Windowed Borderless] display modes using the arrow keys.                                                 |
