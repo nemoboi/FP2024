@@ -1,9 +1,13 @@
 # 2.5.2 Use Case Model
 
-# Class Diagrams
+## Use-Case Diagram
+
+![Use-Case Diagram](usecasediagram.png)
+
+## Activity Diagrams
 
 
-## Blobb Switching on Teleports
+### Blobb Switching on Teleports
 ```Mermaid
 stateDiagram-v2
 [*] --> P1
@@ -18,9 +22,9 @@ P21P12 --> [*]
 PN2 --> [*]
 ```
 
-## Blob Switch Function
+### Blob Switch Function
 
-### Button
+#### Button
 
 ```Mermaid
 graph LR
@@ -34,7 +38,7 @@ PA -- Blobb moves Object --> OP
 OP -- Blobb activates portal with key input--> OPU
 ```
 
-### Switch Object
+#### Switch Object
 
 ```Mermaid
 graph LR
@@ -47,7 +51,7 @@ SR -- Blobb moves Object --> OP
 OP -- Blobb executes Portal --> OPU
 ```
 
-### Switch Blobb
+#### Switch Blobb
 
 ```Mermaid
 graph LR
@@ -60,7 +64,7 @@ SON -- Blob and Blobb move to portal location --> BB
 BB -- Blob/Blobb executes portal --> BPBP
 ```
 
-## Teleportation Modes
+### Teleportation Modes
 
 ```Mermaid
 stateDiagram-v2
