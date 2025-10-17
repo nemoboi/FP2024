@@ -1,11 +1,17 @@
 # 2.5.2 Use Case Model
 
+## Use-Case Description
+
+In this game the players can start a new or load an already existing save into the levels of the game.
+In each level the goal of the players is to reach the end by solving a parkour challenge with their characters, interacting with objects and utilizing teleporters.
+At any time they can open the game options and change them.
+When the players choose to they can end the game and save their current state so later on they can restart from where they last left off.
+
 ## Use-Case Diagram
 
 ![Use-Case Diagram](usecasediagram.png)
 
 ## Activity Diagrams
-
 
 ### Blobb Switching on Teleports
 ```Mermaid
