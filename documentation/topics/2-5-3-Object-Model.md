@@ -1,5 +1,6 @@
 # 2.5.3 Object Model
 
+![Class Diagram Gameplay](classdiagram.png)
 
 ```Mermaid
 classDiagram
