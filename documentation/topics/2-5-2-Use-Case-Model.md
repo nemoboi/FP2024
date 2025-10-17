@@ -13,106 +13,135 @@ When the players choose to they can end the game and save their current state so
 
 ## Activity Diagrams
 
-### Blobb Switching on Teleports
-```Mermaid
-stateDiagram-v2
-[*] --> P1
-P1: Player on "Input Selection 1"
-P2: Player on "Input Selection 2"
-PN2: Player not on "Input Selection 2"
-P21P12: Player 2 on "Teleport Output Section 1" and Player 1 on "Teleport Section 2"
-P1 --> P2
-P1 --> PN2
-P2 --> P21P12
-P21P12 --> [*]
-PN2 --> [*]
-```
-
-### Blob Switch Function
-
-#### Button
-
-```Mermaid
-graph LR
-PI[Portal Inactive]
-PA[Portal Active]
-OP[Object is located on Portal Input]
-OPU[Object Position is updated to portal output]
-PI -- Blob sits on Button --> PA
-PA -- Blob leaves Button --> PI
-PA -- Blobb moves Object --> OP
-OP -- Blobb activates portal with key input--> OPU
-```
-
-#### Switch Object
-
-```Mermaid
-graph LR
-SL[Switch left/Portal inactive]
-SR[Switch right/Portal active]
-OP[Object is located on Portal Input]
-OPU[Object Position is updated to Portal Output]
-SL <-- Blob/Blobb executes Switch --> SR
-SR -- Blobb moves Object --> OP
-OP -- Blobb executes Portal --> OPU
-```
-
-#### Switch Blobb
-
-```Mermaid
-graph LR
-SO[Switch Off/Portal Inactive]
-SON[Switch On/Portal Active]
-BB[Blob and Blobb are located on Portal Input]
-BPBP[Blob Position is updated to Portal Input Blobb and Blobb Position is updated to Portal Output]
-SO <-- Blob/Blobb executes Switch --> SON
-SON -- Blob and Blobb move to portal location --> BB
-BB -- Blob/Blobb executes portal --> BPBP
-```
-
-### Teleportation Modes
+### Player
 
 ```Mermaid
 stateDiagram-v2
-T: Teleporter
-BAT: Button-Activated Teleporter
-SAT: Switch-Activated Teleporter
-AAT: Already-Activated Teleporter
-BP: Button Pressed
-OT: Object Teleporter
-BST: Blobb Switch Teleporter
-T1: Move Object from "Teleporter Section 1" to "Teleporter Section 2"
-T2: Move Blob from "Input Teleporter Section 1" to "Teleporter Section 2". Move Blobb from "Teleporter Section 2" to "Output Teleporter Section 1"
-[*] --> T
-T --> BAT
-T --> SAT
-T --> AAT
-BP -->OT
-BAT --> BP
-BP --> [*]
-OT --> T1
-T1 --> [*]
-SAT --> [*]
-SAT --> BST
-SAT --> OT
-
-    BST --> T2
-    T2 --> [*]
-    AAT --> OT
-    AAT --> BST
+state fork_state <<fork>>
+state if_state <<choice>>
+state if_state2 <<choice>>
+[*] --> fork_state
+fork_state --> if_state
+fork_state --> J
+fork_state --> I
+if_state --> MR: [right]
+if_state --> ML: [left]
+MR: Player moves right
+ML: Player moves left
+J: Player jumps
+I: Player interacts with Object
+MR --> if_state2
+ML --> if_state2
+if_state2 --> OM: [object in front of player]
+OM: Object moves in same direction as Player
+if_state2 --> [*]: [else]
+J --> [*]
+I --> [*]
 ```
+
+### Teleportation
+
+#### Overview Teleport-Modes
 
 ```Mermaid
 graph TD
-    Player["Player"] --> Left["Move Left"]
-    Player --> Right["Move Right"]
-    Player --> Jump["Jump"]
-
-    Left -.-> MoveObject["Move Object"]:::extended
-    Right -.-> MoveObject["Move Object"]:::extended
-    Jump -.-> Teleport["Teleport"]:::extended
-
-    classDef extended fill:#f9f,stroke:#333,stroke-width:2;
-
+    Teleporter --> BAT["Button-Activated Teleporter"]
+    Teleporter --> SAT["Switch-Activated Teleporter"]
+    Teleporter --> AAT["Already-Activated Teleporter"]
+    BAT --> OT["Object Teleporter"]
+    SAT --> OT
+    AAT --> OT
+    SAT --> BST["Blob Switch Teleporter"]
+    AAT --> BST
 ```
 
+#### Activating Portals
+
+##### Button
+
+```Mermaid
+stateDiagram-v2
+[*] --> Button_pressed
+Button_pressed: Player activates Portal by pressing button
+Button_pressed --> Button_left
+Button_left: Player deactivates Portal by stopping button-pressing
+Button_left --> [*]
+```
+
+##### Switch
+
+```Mermaid
+stateDiagram-v2
+[*] --> Switch_on
+Switch_on: Player activates Portal by toggling switch to "ON" position
+Switch_on --> Switch_off
+Switch_off: Player deactivates Portal by toggling switch to "OFF" position
+Switch_off --> [*]
+```
+
+#### Blob Switch Teleporter
+
+```Mermaid
+stateDiagram-v2
+state if_state <<choice>>
+state if_state2 <<choice>>
+state fork_state <<fork>>
+[*] --> fork_state
+fork_state --> P1
+fork_state --> P2
+P1: Player 1 moves onto Input Section
+P2: Player 2 moves onto Input Section 2
+P1 --> P0
+P1 --> Press
+P2 --> P0
+P2 --> Press
+P0: Player leaves Input Section
+Press: Player interacts with Input Section
+P0 --> [*]
+Press --> if_state
+if_state --> [*]: [else]
+if_state --> if_state2: [2 players on inputs]
+if_state2 --> [*]: [portal inactive]
+if_state2 --> Teleport: [portal active]
+Teleport: Teleport Player 1 onto Input Section 2 and Player 2 onto Output Section
+Teleport --> [*]
+```
+
+#### Object Teleporter
+
+```Mermaid
+stateDiagram-v2
+state if_state <<choice>>
+[*] --> OI
+OI: Object is moved onto Input Section
+OI --> PI
+PI: Player interacts with Input Section
+PI --> if_state
+if_state --> TEL: [portal active]
+if_state --> [*]: [portal inactive]
+TEL: Object is teleported onto Output Section
+TEL --> [*]
+```
+
+### Scene Transition
+
+```Mermaid
+stateDiagram-v2
+state if_state <<choice>>
+state fork_state <<fork>>
+[*] --> fork_state
+fork_state --> P1
+fork_state --> P2
+P1: Player 1 leaves scene
+P2: Player 2 leaves scene
+P1 --> P0
+P1 --> if_state
+P2 --> P0
+P2 --> if_state
+P0: Player enters scene
+P0 --> [*]
+if_state --> [*]: [else]
+if_state --> NEXT: [2 players left scene]
+NEXT: Next scene is loaded
+NEXT --> [*]
+```
